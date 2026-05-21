@@ -26,3 +26,47 @@ A high-performance, serverless local area network (LAN) peer-to-peer chat applic
  │    └── networkmanager.cpp
  └── ui/                   # QML declarative user interface layout
       └── Main.qml
+
+```
+
+## 🛠️ **Build & Run Instructions**
+
+### **Prerequisites**
+* **Operating System:** Windows 10 / 11
+* **IDE:** Qt Creator (with Qt 6.x installed)
+* **Compiler:** MinGW 64-bit
+* **Build System:** CMake
+
+### **Step-by-Step Setup**
+1. **Clone or download** this repository to your local directory.
+2. **Launch Qt Creator** and open the `CMakeLists.txt` file located in the project root.
+3. **Select the Desktop Qt MinGW 64-bit** kit configuration.
+4. **Run the CMake configure process** and build the project (`Ctrl + B`).
+5. **Click the green Run button** (`Ctrl + R`) to launch the application.
+
+> **⚠️ Network Firewall Note:** On the initial application launch, Windows Defender Firewall will prompt for permissions. You **must allow network access** for both **Private and Public networks** to enable incoming and outgoing UDP/TCP socket traffic.
+
+---
+
+## 🔬 **Single-Machine Testing Methodology**
+
+Due to local hardware testing limits, network sockets were validated using the local loopback network interface:
+
+* **Discovery Verification:** The application successfully handles self-broadcasting, populating its own node inside the active peer list layout.
+* **Message Loopback Echo:** Sending text to the discovered local IP establishes an internal client-server connection. The message appears twice in the stream—**first** via local client confirmation, and **second** upon successful real-time ingestion by the local TCP server. This architecture guarantees immediate scalability when deployed across multiple nodes on a real WiFi network.
+
+---
+
+## 📺 **Application Walkthrough & Demo**
+
+Click the link below to watch the complete functional verification video covering automated peer discovery, chat persistence reloading, messaging pipeline, and the live visibility toggle mechanism:
+
+🔗 **[Watch the Live Application Demo on Google Drive]( https://drive.google.com/file/d/18_1EfDjsMlt1TjqUkhVyMPfbvy8U7d6u/view?usp=sharing)**
+
+---
+
+## 👤 **Developer Contact**
+
+* **Developer:** Harshit Vats
+* **Email:** harshitvats237@gmail.com
+*  **Contact:** 9518437050
