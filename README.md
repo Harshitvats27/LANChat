@@ -28,6 +28,14 @@ A high-performance, serverless local area network (LAN) peer-to-peer chat applic
       └── Main.qml
 
 ```
+---
+## 📱 **Application UI States**
+
+| 🟢 **Online Mode (Visible)** | 🔴 **Offline Mode (Hidden)** |
+| :---: | :---: |
+| ![Online State](resources/user_online.png) | ![Offline State](resources/user_offline.png) |
+
+---
 
 ## 🛠️ **Build & Run Instructions**
 
